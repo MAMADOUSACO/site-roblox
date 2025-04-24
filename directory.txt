@@ -1,0 +1,58 @@
+/
+├── index.html                     # Page d'accueil principale
+├── css/
+│   ├── main.css                   # Styles principaux et variables CSS
+│   ├── components/
+│   │   ├── header.css             # Style de l'en-tête et navigation
+│   │   ├── hero.css               # Section d'introduction animée
+│   │   ├── video-card.css         # Cartes de vidéos avec animations
+│   │   ├── video-grid.css         # Grille de présentation des vidéos
+│   │   ├── category-tabs.css      # Onglets de catégories interactifs
+│   │   ├── search.css             # Barre de recherche animée
+│   │   ├── filters.css            # Panneau de filtres avancés
+│   │   ├── modal.css              # Fenêtre modale pour détails vidéo
+│   │   ├── tooltip.css            # Info-bulles interactives
+│   │   └── footer.css             # Pied de page
+│   ├── animations/
+│   │   ├── transitions.css        # Animations de transition entre pages/sections
+│   │   ├── hover-effects.css      # Effets au survol des éléments
+│   │   ├── scroll-effects.css     # Animations déclenchées au défilement
+│   │   ├── loading.css            # Animation de chargement
+│   │   └── parallax.css           # Effets de parallaxe pour l'arrière-plan
+│   ├── layout/
+│   │   ├── grid.css               # Système de grille responsive
+│   │   ├── containers.css         # Conteneurs et sections
+│   │   └── spacing.css            # Marges et espacements
+│   ├── utilities/
+│   │   ├── typography.css         # Typographie avec polices intégrées
+│   │   ├── colors.css             # Palette de couleurs et dégradés
+│   │   └── icons.css              # Système d'icônes SVG intégrées
+│   └── responsive.css             # Styles pour différentes tailles d'écran
+├── js/
+│   ├── main.js                    # Script principal d'initialisation
+│   ├── components/
+│   │   ├── navigation.js          # Gestion de la navigation
+│   │   ├── search.js              # Fonctionnalité de recherche
+│   │   ├── video-display.js       # Affichage et interaction des vidéos
+│   │   ├── category-switcher.js   # Changement de catégories
+│   │   ├── filters.js             # Logique de filtrage
+│   │   ├── modal.js               # Contrôleur de fenêtres modales
+│   │   ├── theme-switcher.js      # Basculement mode clair/sombre
+│   │   └── tooltip.js             # Contrôleur d'info-bulles
+│   ├── animations/
+│   │   ├── scroll-observer.js     # Observateur de défilement
+│   │   ├── parallax-effect.js     # Effets de parallaxe
+│   │   ├── hover-controller.js    # Contrôleur d'effets au survol
+│   │   └── loading-animation.js   # Animations de chargement
+│   ├── utils/
+│   │   ├── dom-helpers.js         # Fonctions d'aide pour le DOM
+│   │   ├── youtube-thumbnail.js   # Récupération des vignettes YouTube
+│   │   ├── local-storage.js       # Gestion du stockage local
+│   │   └── url-parser.js          # Analyse des paramètres d'URL
+│   └── data/
+│       └── videos.js              # Données des vidéos structurées
+└── pages/
+    ├── beginners.html             # Page des tutoriels débutants
+    ├── intermediate.html          # Page des tutoriels intermédiaires
+    ├── advanced.html              # Page des tutoriels avancés
+    └── principles.html            # Page des principes de design UI
