@@ -237,7 +237,7 @@ import {
     const button = event.currentTarget;
     
     // Afficher l'animation de chargement
-    toggleLoadMoreButton(button, true);
+    updateLoadMoreButtonState(button, true);
     
     // Incrémenter la page actuelle
     state.currentPage++;
@@ -254,7 +254,7 @@ import {
       }
       
       // Masquer l'animation de chargement
-      toggleLoadMoreButton(button, false);
+      updateLoadMoreButtonState(button, false);
     }, CONFIG.LOADING_DELAY);
   };
   
@@ -331,7 +331,7 @@ import {
     if (!container) return;
     
     // Affiche ou masque le bouton "Charger plus" en fonction du nombre de vidéos
-    toggleLoadMoreButton(container, endIndex < videos.length);
+    updateLoadMoreButtonState(container, endIndex < videos.length);
     
     // Si on ne doit pas ajouter aux vidéos existantes, vider le conteneur
     if (!append) {
@@ -794,7 +794,7 @@ import {
       hideLoader(container, 'filter-videos');
       
       // Affiche ou masque le bouton "Charger plus" en fonction du nombre de vidéos
-      toggleLoadMoreButton(container, endIndex < filteredVideos.length);
+      updateLoadMoreButtonState(container, endIndex < filteredVideos.length);
       
       // Charge les cartes vidéo
       loadVideoCards(currentPageVideos, container);
@@ -806,7 +806,7 @@ import {
    * @param {Element} container - Conteneur parent du bouton
    * @param {boolean} [show=true] - Si true, affiche le bouton
    */
-  const toggleLoadMoreButton = (container, show = true) => {
+  const updateLoadMoreButtonState = (container, show = true) => {
     if (!container) return;
     
     // Trouve le conteneur du bouton "Charger plus"

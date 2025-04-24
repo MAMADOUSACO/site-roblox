@@ -7,15 +7,45 @@
     <title>Tutoriels UI ROBLOX - Apprenez à créer des interfaces UI dans ROBLOX</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iIzAwYTJmZiIgZD0iTTE2IDJDOCAyIDIgOCAyIDE2czkgMTQgMTkgMTRjNiAwIDExLTMgMTEtOSAwLTIuNS0xLjUtNC41LTQtNi41LS41LS41LTEtLjUtMS41IDBzLS41IDEgMCAxLjVjMi41IDEuNSAzLjUgMyAzLjUgNC4yIDAgMi41LTEuNSA0LjMtNCA2LjMtMSAxLTIuNSAxLjUtNCAyLTIgLjUtNCAxLTYuNSAxLTIuNSAwLTUgLTEtNi41IC0yLTIuNS0xLjUtNC41LTMuOC00LjUtNyAwLTMgMS41LTUuNSA0LTcuM3M1LjMtMi43IDguNS0yLjdjMiAwIDQgLjUgNiAxLjZzMyAyLjYgNCw0YS45LjkgMCAwIDAgMS4yLjRjLjQtLjMuNS0uOC4yLTEuMkMyNi42IDguOSAyNS4zIDcuMyAyMy41IDZjLTEuOC0xLjMtNC0yLTYuNS0yLS41IDAtMS4zIDAtMiAuMi0uNS8wLS44LjUtLjUgMS4zIDAgLjUuNS44IDEgLjUgMCAwIC41LS4yIDEuNS0uMi41IDAgMS4zLjIgMS44LjQgMiAuOCAzIDEuNyAzIDIuOCAwIDEuMy0xLjUgMi41LTQgMi41LS43IDAtMS40LS4yLTItLjVhLjguOCAwIDAgMC0xIC4zczAgLjcuNS45QzE2IDEzLjkgMTcgMTQgMTggMTRjMS4zIDAgMi41LS4zIDMuNS0uOXMxLjUtMS42IDEuNS0yLjhjMC0xLjctMS4yLTMtMy4zLTMuOC0uNS0uMy0xLjItLjQtMi0uNXMtMS43LS4zLTIuNy0uM2MtMiAwLTQgLjUtNiAxLjZDNyA4IDUuNSAxMCA1LjUgMTIuNXMxIDQuNSAzIDYuNXM1IDMgOC41IDNjMSAwIDIuNSAwIDMuNS0uNXMyLS41IDMtMWMxLjgtMSAzLTIgNC0zLjVzMS41LTMgMS41LTQuNy0uNi0zLjMtMS44LTQuOGMtMS4xLTEuNS0yLjctMi43LTQuNy0zLjdDMjAuNSAzIDI4IDMgMTYgMyA5IDMgNCA4IDQgMTZzNiAxMyAxMyAxM2M2IDAgMTEtNCAxMS0xMCAwLTMuOC0zLTctNy05LS41LS4zLTEgMC0xLjMuM3MtLjMgMSAwIDEuMkMyMy41IDEzLjMgMjYgMTYgMjYgMTljMCA1LTQgOC05IDgtNiAwLTExLTQtMTEtMTFzNC0xMCAxMC0xMGMxLjYgMCAzIC4zIDQuMyAxcy0uOCAxLTEuMyAxLjNjMCAwLS41LjUtLjUgMSAwIC41LjMuOCAxLjIuOGwyLS4zczEtLjMgMS4yLTEuMi0uNS0xLjUtMS0xLjdzLTEtLjMtMi0uM2MtMiAwLTQgLjQtNS44IDEuM3MtMyAyLTQgMy41LTEuMiAzLTEuMiA0LjcgLjcgMy4zIDEuOCA1YzEuMiAxLjYgMi43IDMgNC43IDQgMiAxIDQgMS42IDYuNSAxLjYgMyAwIDUuNS0xIDcuNS0yLjYgMi0xLjcgMy01IDMtOC40cy0xLjctNi40LTQuMy04LjZBMTQgMTQgMCAwIDAgMTYgMnoiLz48L3N2Zz4=">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iIzAwYTJmZiIgZD0iTTE2IDJDOCAyIDIgOCAyIDE2czkgMTQgMTkgMTRjNiAwIDExLTMgMTEtOSAwLTIuNS0xLjUtNC41LTQtNi41LS41LS41LTEtLjUtMS41IDBzLS41IDEgMCAxLjVjMi41IDEuNSAzLjUgMyAzLjUgNC4yIDAgMi41LTEuNSA0LjMtNCA2LjMtMSAxLTIuNSAxLjUtNCAyLTIgLjUtNCAxLTYuNSAxLTIuNSAwLTUgLTEtNi41IC0yLTIuNS0xLjUtNC41LTMuOC00LjUtNyAwLTMgMS41LTUuNSA0LTcuM3M1LjMtMi43IDguNS0yLjdjMiAwIDQgLjUgNiAxLjZzMyAyLjYgNCw0YS45LjkgMCAwIDAgMS4yLjRjLjQtLjMuNS0uOC4yLTEuMkMyNi42IDguOSAyNS4zIDcuMyAyMy41IDZjLTEuOC0xLjMtNCAtMi02LjUtMi0uNSAwLTEuMyAwLTIgLjItLjUvMC0uOC41LS41IDEuMyAwIC41LjUuOCAxIC41IDAgMCAuNS0uMiAxLjUtLjIuNSAwIDEuMy4yIDEuOC40IDIgLjggMyAxLjcgMyAyLjggMCAxLjMtMS41IDIuNS00IDIuNS0uNyAwLTEuNC0uMi0yLS41YS44LjggMCAwIDAtMSAuM3MwIC43LjUuOUMxNiAxMy45IDE3IDE0IDE4IDE0YzEuMyAwIDIuNS0uMyAzLjUtLjlzMS41LTEuNiAxLjUtMi44YzAtMS43LTEuMi0zLTMuMy0zLjgtLjUtLjMtMS4yLS40LTItLjVzLTEuNy0uMy0yLjctLjNjLTIgMC00IC41LTYgMS42QzcgOCA1LjUgMTAgNS41IDEyLjVzMSA0LjUgMyA2LjVzNSAzIDguNSAzYzEgMCAyLjUgMCAzLjUtLjVzMi0uNSAzLTFjMS44LTEgMy0yIDQtMy41czEuNS0zIDEuNS00LjctLjYtMy4zLTEuOC00LjhjLTEuMS0xLjUtMi43LTIuNy00LjctMy43QzIwLjUgMyAyOCAzIDE2IDMgOSAzIDQgOCA0IDE2czYgMTMgMTMgMTNjNiAwIDExLTQgMTEtMTAgMC0zLjgtMy03LTctOS0uNS0uMy0xIDAtMS4zLjNzLS4zIDEgMCAxLjJDMjMuNSAxMy4zIDI2IDE2IDI2IDE5YzAgNS00IDgtOSA4LTYgMC0xMS00LTExLTExczQtMTAgMTAtMTBjMS42IDAgMyAuMyA0LjMgMXMtLjggMS0xLjMgMS4zYzAgMC0uNS41LS41IDEgMCAuNS4zLjggMS4yLjhsMi0uM3MxLS4zIDEuMi0xLjItLjUtMS41LTEtMS43LTEtLjMtMi0uM2MtMiAwLTQgLjQtNS44IDEuM3MtMyAyLTQgMy41LTEuMiAzLTEuMiA0LjcgLjcgMy4zIDEuOCA1YzEuMiAxLjYgMi43IDMgNC43IDQgMiAxIDQgMS42IDYuNSAxLjYgMyAwIDUuNS0xIDcuNS0yLjYgMi0xLjcgMy01IDMtOC40cy0xLjctNi40LTQuMy04LjZBMTQgMTQgMCAwIDAgMTYgMnoiLz48L3N2Zz4=">
     
-    <!-- CSS Files -->
+    <!-- Ajoutez ceci dans le <head> de votre index.html, avant les autres CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS existants -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" as="style" href="css/components/header.css">
-    <link rel="preload" as="style" href="css/components/hero.css">
+    <!-- Ajouter les composants CSS directement -->
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/video-card.css">
+    <link rel="stylesheet" href="css/components/video-grid.css">
+    <link rel="stylesheet" href="css/components/category-tabs.css">
+    <link rel="stylesheet" href="css/components/search.css">
+    <link rel="stylesheet" href="css/components/filters.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/tooltip.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="css/animations/transitions.css">
+    <link rel="stylesheet" href="css/animations/hover-effects.css">
+    <link rel="stylesheet" href="css/animations/scroll-effects.css">
+    <link rel="stylesheet" href="css/animations/loading.css">
+    <link rel="stylesheet" href="css/animations/parallax.css">
+    
+    <!-- Layout CSS -->
+    <link rel="stylesheet" href="css/layout/grid.css">
+    <link rel="stylesheet" href="css/layout/containers.css">
+    <link rel="stylesheet" href="css/layout/spacing.css">
+    
+    <!-- Utilities CSS -->
+    <link rel="stylesheet" href="css/utilities/typography.css">
+    <link rel="stylesheet" href="css/utilities/colors.css">
+    <link rel="stylesheet" href="css/utilities/icons.css">
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Tutoriels UI ROBLOX - Apprenez à créer des interfaces UI dans ROBLOX">
@@ -1007,24 +1037,7 @@
         </div>
     </div>
 
-    <!-- JavaScript Files -->
-    <script src="js/main.js"></script>
-    <script src="js/components/navigation.js"></script>
-    <script src="js/components/search.js"></script>
-    <script src="js/components/video-display.js"></script>
-    <script src="js/components/category-switcher.js"></script>
-    <script src="js/components/filters.js"></script>
-    <script src="js/components/modal.js"></script>
-    <script src="js/components/theme-switcher.js"></script>
-    <script src="js/components/tooltip.js"></script>
-    <script src="js/animations/scroll-observer.js"></script>
-    <script src="js/animations/parallax-effect.js"></script>
-    <script src="js/animations/hover-controller.js"></script>
-    <script src="js/animations/loading-animation.js"></script>
-    <script src="js/utils/dom-helpers.js"></script>
-    <script src="js/utils/youtube-thumbnail.js"></script>
-    <script src="js/utils/local-storage.js"></script>
-    <script src="js/utils/url-parser.js"></script>
-    <script src="js/data/videos.js"></script>
+    <!-- JavaScript Files - Module import -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

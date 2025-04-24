@@ -1,12 +1,4 @@
-/* Polices intégrées directement */
-@font-face {
-    font-family: 'RobloxFont';
-    src: url('data:font/woff2;charset=utf-8;base64,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') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  :root {
+    :root {
     /* Variables de couleurs inspirées de Roblox */
     --primary: #00a2ff;
     --primary-light: #66c7ff;
@@ -37,8 +29,8 @@
     --ease-in-timing: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     
     /* Variables typographiques */
-    --font-primary: 'RobloxFont', sans-serif;
-    --font-secondary: 'Arial', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
     --font-size-xs: 0.75rem;   /* 12px */
     --font-size-sm: 0.875rem;  /* 14px */
     --font-size-md: 1rem;      /* 16px */
@@ -366,27 +358,3 @@
   .flex-shrink-1 {
     flex-shrink: 1;
   }
-  
-  /* Import des autres fichiers CSS */
-  @import url('components/header.css');
-  @import url('components/hero.css');
-  @import url('components/video-card.css');
-  @import url('components/video-grid.css');
-  @import url('components/category-tabs.css');
-  @import url('components/search.css');
-  @import url('components/filters.css');
-  @import url('components/modal.css');
-  @import url('components/tooltip.css');
-  @import url('components/footer.css');
-  @import url('animations/transitions.css');
-  @import url('animations/hover-effects.css');
-  @import url('animations/scroll-effects.css');
-  @import url('animations/loading.css');
-  @import url('animations/parallax.css');
-  @import url('layout/grid.css');
-  @import url('layout/containers.css');
-  @import url('layout/spacing.css');
-  @import url('utilities/typography.css');
-  @import url('utilities/colors.css');
-  @import url('utilities/icons.css');
-  @import url('responsive.css');
