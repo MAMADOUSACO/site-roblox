@@ -1,0 +1,567 @@
+/* Parallax Effects CSS */
+
+/* Base parallax container */
+.parallax {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Simple Parallax Background */
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Parallax Layers */
+  .parallax-container {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  
+  .parallax-layer-back {
+    transform: translateZ(-600px) scale(3);
+  }
+  
+  .parallax-layer-middle {
+    transform: translateZ(-300px) scale(2);
+  }
+  
+  .parallax-layer-front {
+    transform: translateZ(0);
+  }
+  
+  /* Parallax Sections */
+  .parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--spacing-xl);
+    max-width: 800px;
+    color: var(--white);
+  }
+  
+  /* Mouse Movement Parallax */
+  .mouse-parallax {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .mouse-parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s ease-out;
+  }
+  
+  .mouse-parallax-slow {
+    transform: translate(0, 0);
+  }
+  
+  .mouse-parallax-medium {
+    transform: translate(0, 0);
+  }
+  
+  .mouse-parallax-fast {
+    transform: translate(0, 0);
+  }
+  
+  /* Tilt Parallax */
+  .tilt-parallax {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .tilt-parallax-content {
+    transform-style: preserve-3d;
+  }
+  
+  .tilt-parallax-layer {
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .tilt-parallax-deep {
+    transform: translateZ(100px);
+  }
+  
+  .tilt-parallax-medium {
+    transform: translateZ(50px);
+  }
+  
+  .tilt-parallax-shallow {
+    transform: translateZ(25px);
+  }
+  
+  /* Scroll Parallax */
+  .scroll-parallax {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scroll-parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Parallax Hero Section */
+  .parallax-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .parallax-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .parallax-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: var(--spacing-xl);
+    max-width: 800px;
+    color: var(--white);
+  }
+  
+  /* Parallax Card */
+  .parallax-card {
+    position: relative;
+    height: 300px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .dark-theme .parallax-card {
+    background-color: var(--dark);
+  }
+  
+  .parallax-card-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-card-bg {
+    transform: translateZ(-50px) scale(1.2);
+    opacity: 0.6;
+  }
+  
+  .parallax-card-content {
+    transform: translateZ(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  /* Parallax Grid */
+  .parallax-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: var(--spacing-lg);
+  }
+  
+  .parallax-grid-item {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .parallax-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-20px) scale(1.2);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .parallax-grid-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    color: var(--white);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    transform: translateZ(20px);
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* Parallax Text Effects */
+  .parallax-text {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-text-layer {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-text-front {
+    transform: translateZ(20px);
+    color: var(--primary);
+  }
+  
+  .parallax-text-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateZ(-20px);
+    color: var(--gray-light);
+    filter: blur(2px);
+  }
+  
+  .dark-theme .parallax-text-back {
+    color: var(--gray-dark);
+  }
+  
+  /* Parallax Scroll Sections */
+  .parallax-scroll-container {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 1px;
+  }
+  
+  .parallax-scroll-group {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax-scroll-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .parallax-scroll-deep {
+    transform: translateZ(-2px) scale(3);
+  }
+  
+  .parallax-scroll-medium {
+    transform: translateZ(-1px) scale(2);
+  }
+  
+  .parallax-scroll-base {
+    transform: translateZ(0);
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Staggered Parallax Gallery */
+  .parallax-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+  
+  .parallax-gallery-item {
+    flex: 1 1 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .parallax-gallery-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .parallax-gallery-item:hover .parallax-gallery-image {
+    transform: translateY(-10%);
+  }
+  
+  /* Parallax Waves */
+  .parallax-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    transform-style: preserve-3d;
+    z-index: 1;
+  }
+  
+  .parallax-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 1000px 100px;
+  }
+  
+  .parallax-wave:nth-child(1) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23ffffff'/%3E%3C/svg%3E");
+    transform: translateZ(-50px) scale(1.5);
+    animation: waveAnimation 25s linear infinite;
+  }
+  
+  .parallax-wave:nth-child(2) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.5' fill='%23ffffff'/%3E%3C/svg%3E");
+    transform: translateZ(-25px) scale(1.25);
+    animation: waveAnimation 20s linear infinite;
+  }
+  
+  .parallax-wave:nth-child(3) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.75' fill='%23ffffff'/%3E%3C/svg%3E");
+    transform: translateZ(0);
+    animation: waveAnimation 15s linear infinite;
+  }
+  
+  .dark-theme .parallax-wave:nth-child(1),
+  .dark-theme .parallax-wave:nth-child(2),
+  .dark-theme .parallax-wave:nth-child(3) {
+    filter: invert(1);
+  }
+  
+  @keyframes waveAnimation {
+    0% {
+      background-position-x: 0;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+  
+  /* Parallax Particles */
+  .parallax-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .parallax-particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  
+  .dark-theme .parallax-particle {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Parallax Depth Map */
+  .parallax-depth {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .parallax-depth-item {
+    position: absolute;
+    transform-style: preserve-3d;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* Parallax Mouse Trail */
+  .mouse-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .mouse-trail-point {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s linear, opacity 1s ease;
+    pointer-events: none;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 992px) {
+    .parallax-container,
+    .parallax-hero {
+      height: 400px;
+    }
+    
+    .parallax-section {
+      height: 70vh;
+    }
+    
+    .parallax-gallery-item {
+      flex-basis: 250px;
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .parallax-container {
+      height: 300px;
+    }
+    
+    .parallax-hero {
+      height: 350px;
+    }
+    
+    .parallax-card {
+      height: 250px;
+    }
+    
+    .parallax-gallery-item {
+      flex-basis: 200px;
+      height: 200px;
+    }
+    
+    .parallax-waves {
+      height: 70px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .parallax-container {
+      height: 250px;
+    }
+    
+    .parallax-hero {
+      height: 300px;
+    }
+    
+    .parallax-waves {
+      height: 50px;
+    }
+  }
+  
+  /* Reduced Motion Preference */
+  @media (prefers-reduced-motion: reduce) {
+    .parallax-bg,
+    .parallax-layer,
+    .mouse-parallax-layer,
+    .parallax-gallery-image,
+    .parallax-wave,
+    .parallax-particle,
+    .parallax-depth-item,
+    .mouse-trail-point,
+    .tilt-parallax,
+    .tilt-parallax-layer {
+      transition: none !important;
+      animation: none !important;
+      transform: none !important;
+    }
+    
+    .parallax-scroll-deep,
+    .parallax-scroll-medium,
+    .parallax-scroll-base {
+      transform: none !important;
+    }
+    
+    .parallax-card-bg,
+    .parallax-card-content,
+    .parallax-grid-bg,
+    .parallax-grid-content,
+    .parallax-text-front,
+    .parallax-text-back {
+      transform: none !important;
+    }
+  }

@@ -1,0 +1,635 @@
+/* Hover Effects CSS */
+
+/* Base hover transition */
+[class*="hover-"] {
+    transition: all var(--transition-speed) ease;
+  }
+  
+  /* Hover Scale */
+  .hover-scale {
+    transition: transform var(--transition-speed) var(--bounce-timing);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-scale-sm:hover {
+    transform: scale(1.02);
+  }
+  
+  .hover-scale-lg:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Hover Lift (Move Up) */
+  .hover-lift {
+    transition: transform var(--transition-speed) var(--bounce-timing),
+                box-shadow var(--transition-speed) ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .hover-lift-sm:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .hover-lift-lg:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Hover Background */
+  .hover-bg {
+    transition: background-color var(--transition-speed) ease;
+  }
+  
+  .hover-bg:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dark-theme .hover-bg:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .hover-bg-primary:hover {
+    background-color: rgba(var(--primary-rgb), 0.1);
+  }
+  
+  .hover-bg-secondary:hover {
+    background-color: rgba(var(--secondary-rgb), 0.1);
+  }
+  
+  .hover-bg-accent:hover {
+    background-color: rgba(var(--accent-rgb), 0.1);
+  }
+  
+  /* Hover Border */
+  .hover-border {
+    transition: border-color var(--transition-speed) ease;
+  }
+  
+  .hover-border:hover {
+    border-color: var(--primary);
+  }
+  
+  .hover-border-primary:hover {
+    border-color: var(--primary);
+  }
+  
+  .hover-border-secondary:hover {
+    border-color: var(--secondary);
+  }
+  
+  .hover-border-accent:hover {
+    border-color: var(--accent);
+  }
+  
+  /* Hover Shadow */
+  .hover-shadow {
+    transition: box-shadow var(--transition-speed) ease;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .hover-shadow-sm:hover {
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .hover-shadow-lg:hover {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .hover-shadow-xl:hover {
+    box-shadow: var(--shadow-xl);
+  }
+  
+  /* Hover Color */
+  .hover-color {
+    transition: color var(--transition-speed) ease;
+  }
+  
+  .hover-color:hover {
+    color: var(--primary);
+  }
+  
+  .hover-color-primary:hover {
+    color: var(--primary);
+  }
+  
+  .hover-color-secondary:hover {
+    color: var(--secondary);
+  }
+  
+  .hover-color-accent:hover {
+    color: var(--accent);
+  }
+  
+  /* Hover Rotate */
+  .hover-rotate {
+    transition: transform var(--transition-speed) var(--bounce-timing);
+  }
+  
+  .hover-rotate:hover {
+    transform: rotate(5deg);
+  }
+  
+  .hover-rotate-sm:hover {
+    transform: rotate(2deg);
+  }
+  
+  .hover-rotate-lg:hover {
+    transform: rotate(10deg);
+  }
+  
+  /* Hover Skew */
+  .hover-skew {
+    transition: transform var(--transition-speed) var(--bounce-timing);
+  }
+  
+  .hover-skew:hover {
+    transform: skew(-5deg);
+  }
+  
+  .hover-skew-sm:hover {
+    transform: skew(-2deg);
+  }
+  
+  .hover-skew-lg:hover {
+    transform: skew(-10deg);
+  }
+  
+  /* Hover Glow */
+  .hover-glow {
+    transition: box-shadow var(--transition-speed) ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.5);
+  }
+  
+  .hover-glow-primary:hover {
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.5);
+  }
+  
+  .hover-glow-secondary:hover {
+    box-shadow: 0 0 15px rgba(var(--secondary-rgb), 0.5);
+  }
+  
+  .hover-glow-accent:hover {
+    box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.5);
+  }
+  
+  /* Hover Shine Effect */
+  .hover-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: all 0.75s ease;
+  }
+  
+  .hover-shine:hover::after {
+    left: 150%;
+  }
+  
+  /* Hover Blur */
+  .hover-blur {
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-blur:hover {
+    filter: blur(2px);
+  }
+  
+  /* Hover Unblur */
+  .hover-unblur {
+    filter: blur(2px);
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-unblur:hover {
+    filter: blur(0);
+  }
+  
+  /* Hover Brightness */
+  .hover-brightness {
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-brightness:hover {
+    filter: brightness(1.2);
+  }
+  
+  /* Hover Grayscale */
+  .hover-grayscale {
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-grayscale:hover {
+    filter: grayscale(100%);
+  }
+  
+  /* Hover Ungrayscale */
+  .hover-ungrayscale {
+    filter: grayscale(100%);
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-ungrayscale:hover {
+    filter: grayscale(0%);
+  }
+  
+  /* Hover Saturate */
+  .hover-saturate {
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-saturate:hover {
+    filter: saturate(1.5);
+  }
+  
+  /* Hover Sepia */
+  .hover-sepia {
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-sepia:hover {
+    filter: sepia(100%);
+  }
+  
+  /* Hover Underline */
+  .hover-underline {
+    position: relative;
+  }
+  
+  .hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .hover-underline:hover::after {
+    width: 100%;
+  }
+  
+  /* Hover Underline From Center */
+  .hover-underline-center {
+    position: relative;
+  }
+  
+  .hover-underline-center::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width var(--transition-speed) var(--ease-out-timing),
+                left var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .hover-underline-center:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Hover Zoom Image */
+  .hover-zoom-img {
+    overflow: hidden;
+  }
+  
+  .hover-zoom-img img {
+    transition: transform var(--transition-speed-slow) var(--ease-out-timing);
+  }
+  
+  .hover-zoom-img:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Hover Reveal */
+  .hover-reveal {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover-reveal-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--white);
+    transform: translateY(100%);
+    transition: transform var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .hover-reveal:hover .hover-reveal-content {
+    transform: translateY(0);
+  }
+  
+  /* Hover Fade In */
+  .hover-fade-in {
+    opacity: 0.6;
+    transition: opacity var(--transition-speed) ease;
+  }
+  
+  .hover-fade-in:hover {
+    opacity: 1;
+  }
+  
+  /* Hover Fade Out */
+  .hover-fade-out {
+    opacity: 1;
+    transition: opacity var(--transition-speed) ease;
+  }
+  
+  .hover-fade-out:hover {
+    opacity: 0.6;
+  }
+  
+  /* Hover Ripple Effect */
+  .hover-ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+  }
+  
+  .hover-ripple:hover::after {
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
+  
+  /* Hover Bounce */
+  .hover-bounce {
+    transition: transform var(--transition-speed) var(--bounce-timing);
+  }
+  
+  .hover-bounce:hover {
+    animation: bounce 0.5s var(--bounce-timing) both;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Hover Pulse */
+  .hover-pulse:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Hover Shake */
+  .hover-shake:hover {
+    animation: shake 0.5s var(--bounce-timing) both;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 60% {
+      transform: translateX(-5px);
+    }
+    40%, 80% {
+      transform: translateX(5px);
+    }
+  }
+  
+  /* Hover Float */
+  .hover-float:hover {
+    animation: float 1.5s infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover Button Effects */
+  .btn.hover-expand {
+    transition: padding var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .btn.hover-expand:hover {
+    padding-left: calc(var(--spacing-lg) + 5px);
+    padding-right: calc(var(--spacing-lg) + 5px);
+  }
+  
+  /* Hover Icon Animations */
+  .hover-icon-right i, 
+  .hover-icon-right svg {
+    margin-left: var(--spacing-xs);
+    transition: transform var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .hover-icon-right:hover i,
+  .hover-icon-right:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .hover-icon-up i,
+  .hover-icon-up svg {
+    transition: transform var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .hover-icon-up:hover i,
+  .hover-icon-up:hover svg {
+    transform: translateY(-3px);
+  }
+  
+  .hover-icon-rotate i,
+  .hover-icon-rotate svg {
+    transition: transform var(--transition-speed) var(--ease-out-timing);
+  }
+  
+  .hover-icon-rotate:hover i,
+  .hover-icon-rotate:hover svg {
+    transform: rotate(20deg);
+  }
+  
+  /* Hover Border Animation */
+  .hover-border-draw {
+    position: relative;
+  }
+  
+  .hover-border-draw::before, 
+  .hover-border-draw::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: width 0.25s ease-out, height 0.25s ease-out, opacity 0.25s ease-out;
+  }
+  
+  .hover-border-draw::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+  }
+  
+  .hover-border-draw::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+  }
+  
+  .hover-border-draw:hover::before, 
+  .hover-border-draw:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+  
+  /* Hover 3D Effect */
+  .hover-3d {
+    transition: transform var(--transition-speed) ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .hover-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+  }
+  
+  /* Hover Filter Effects */
+  .hover-filter {
+    filter: contrast(90%) brightness(90%);
+    transition: filter var(--transition-speed) ease;
+  }
+  
+  .hover-filter:hover {
+    filter: contrast(100%) brightness(100%);
+  }
+  
+  /* Hover Text Shadow */
+  .hover-text-shadow {
+    transition: text-shadow var(--transition-speed) ease;
+  }
+  
+  .hover-text-shadow:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover Tilt Effect */
+  .hover-tilt {
+    transition: transform var(--transition-speed) ease;
+    transform-style: preserve-3d;
+  }
+  
+  .hover-tilt:hover {
+    transform: perspective(500px) rotateX(5deg);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    /* Disable some hover effects on touch devices */
+    .hover-scale, 
+    .hover-scale-sm, 
+    .hover-scale-lg,
+    .hover-lift,
+    .hover-lift-sm,
+    .hover-lift-lg,
+    .hover-rotate,
+    .hover-skew,
+    .hover-3d,
+    .hover-tilt {
+      transition: none;
+    }
+    
+    .hover-scale:hover, 
+    .hover-scale-sm:hover, 
+    .hover-scale-lg:hover,
+    .hover-lift:hover,
+    .hover-lift-sm:hover,
+    .hover-lift-lg:hover,
+    .hover-rotate:hover,
+    .hover-skew:hover,
+    .hover-3d:hover,
+    .hover-tilt:hover {
+      transform: none;
+    }
+  }

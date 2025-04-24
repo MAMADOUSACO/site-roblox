@@ -1,0 +1,739 @@
+/* Icons CSS */
+
+/* Base Icon Settings */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    vertical-align: middle;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  /* Icon Sizes */
+  .icon-xs {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5;
+  }
+  
+  .icon-sm {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .icon-md {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-lg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 1.75;
+  }
+  
+  .icon-xl {
+    width: 40px;
+    height: 40px;
+    stroke-width: 1.5;
+  }
+  
+  .icon-2xl {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1.5;
+  }
+  
+  .icon-3xl {
+    width: 64px;
+    height: 64px;
+    stroke-width: 1.25;
+  }
+  
+  /* Icon Colors - Using currentColor by default, but can be overridden */
+  .icon-primary {
+    color: var(--primary);
+  }
+  
+  .icon-primary-light {
+    color: var(--primary-light);
+  }
+  
+  .icon-primary-dark {
+    color: var(--primary-dark);
+  }
+  
+  .icon-secondary {
+    color: var(--secondary);
+  }
+  
+  .icon-secondary-light {
+    color: var(--secondary-light);
+  }
+  
+  .icon-secondary-dark {
+    color: var(--secondary-dark);
+  }
+  
+  .icon-dark {
+    color: var(--dark);
+  }
+  
+  .icon-light {
+    color: var(--light);
+  }
+  
+  .icon-gray {
+    color: var(--gray);
+  }
+  
+  .icon-gray-light {
+    color: var(--gray-light);
+  }
+  
+  .icon-gray-dark {
+    color: var(--gray-dark);
+  }
+  
+  .icon-accent {
+    color: var(--accent);
+  }
+  
+  .icon-success {
+    color: var(--success);
+  }
+  
+  .icon-warning {
+    color: var(--warning);
+  }
+  
+  .icon-info {
+    color: var(--info);
+  }
+  
+  .icon-white {
+    color: var(--white);
+  }
+  
+  .icon-black {
+    color: var(--black);
+  }
+  
+  /* Icon with backgrounds */
+  .icon-bg {
+    padding: 8px;
+    background-color: rgba(var(--primary-rgb), 0.1);
+    border-radius: var(--border-radius-full);
+  }
+  
+  .icon-bg-xs {
+    padding: 4px;
+  }
+  
+  .icon-bg-sm {
+    padding: 6px;
+  }
+  
+  .icon-bg-md {
+    padding: 8px;
+  }
+  
+  .icon-bg-lg {
+    padding: 10px;
+  }
+  
+  .icon-bg-xl {
+    padding: 12px;
+  }
+  
+  .icon-bg-primary {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+  }
+  
+  .icon-bg-secondary {
+    background-color: rgba(var(--secondary-rgb), 0.1);
+    color: var(--secondary);
+  }
+  
+  .icon-bg-dark {
+    background-color: rgba(var(--dark-rgb), 0.1);
+    color: var(--dark);
+  }
+  
+  .icon-bg-light {
+    background-color: rgba(var(--light-rgb), 0.1);
+    color: var(--light);
+  }
+  
+  .icon-bg-accent {
+    background-color: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+  }
+  
+  .icon-bg-success {
+    background-color: rgba(var(--success-rgb), 0.1);
+    color: var(--success);
+  }
+  
+  .icon-bg-warning {
+    background-color: rgba(var(--warning-rgb), 0.1);
+    color: var(--warning);
+  }
+  
+  .icon-bg-info {
+    background-color: rgba(var(--info-rgb), 0.1);
+    color: var(--info);
+  }
+  
+  /* Solid icons (filled) */
+  .icon-solid {
+    fill: currentColor;
+  }
+  
+  /* Icon Styles */
+  .icon-rounded {
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .icon-circle {
+    border-radius: var(--border-radius-full);
+  }
+  
+  /* Icon Borders */
+  .icon-border {
+    border: 1px solid currentColor;
+    padding: 6px;
+  }
+  
+  .icon-border-2 {
+    border: 2px solid currentColor;
+    padding: 5px;
+  }
+  
+  .icon-border-light {
+    border-color: var(--gray-light);
+  }
+  
+  .icon-border-dark {
+    border-color: var(--gray-dark);
+  }
+  
+  /* Icon Shadows */
+  .icon-shadow {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  
+  .icon-shadow-md {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  }
+  
+  .icon-shadow-lg {
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  }
+  
+  /* Icon Animations */
+  .icon-spin {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .icon-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .icon-shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation-iteration-count: infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  .icon-beat {
+    animation: beat 1s ease-in-out infinite;
+  }
+  
+  @keyframes beat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+  }
+  
+  .icon-flicker {
+    animation: flicker 2s linear infinite;
+  }
+  
+  @keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+      opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Icon Hover Effects */
+  .icon-hover-rotate:hover {
+    transform: rotate(15deg);
+  }
+  
+  .icon-hover-scale:hover {
+    transform: scale(1.2);
+  }
+  
+  .icon-hover-shake:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+  
+  .icon-hover-primary:hover {
+    color: var(--primary);
+  }
+  
+  .icon-hover-secondary:hover {
+    color: var(--secondary);
+  }
+  
+  .icon-hover-accent:hover {
+    color: var(--accent);
+  }
+  
+  /* Icon Positioning */
+  .icon-left {
+    margin-right: var(--spacing-xs);
+  }
+  
+  .icon-right {
+    margin-left: var(--spacing-xs);
+  }
+  
+  .icon-top {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .icon-bottom {
+    margin-top: var(--spacing-xs);
+  }
+  
+  /* Icon with Text (inline) */
+  .icon-text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  /* Icon Group */
+  .icon-group {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .icon-group .icon {
+    margin: 0 var(--spacing-xs);
+  }
+  
+  .icon-group-vertical {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-group-vertical .icon {
+    margin: var(--spacing-xs) 0;
+  }
+  
+  /* Feature Icon (with circle background) */
+  .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-full);
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .feature-icon .icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .feature-icon-sm {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .feature-icon-sm .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .feature-icon-lg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .feature-icon-lg .icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .feature-icon-primary {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+  }
+  
+  .feature-icon-secondary {
+    background-color: rgba(var(--secondary-rgb), 0.1);
+    color: var(--secondary);
+  }
+  
+  .feature-icon-accent {
+    background-color: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+  }
+  
+  .feature-icon-success {
+    background-color: rgba(var(--success-rgb), 0.1);
+    color: var(--success);
+  }
+  
+  .feature-icon-warning {
+    background-color: rgba(var(--warning-rgb), 0.1);
+    color: var(--warning);
+  }
+  
+  .feature-icon-info {
+    background-color: rgba(var(--info-rgb), 0.1);
+    color: var(--info);
+  }
+  
+  /* Status Icons */
+  .status-icon {
+    position: relative;
+    display: inline-flex;
+  }
+  
+  .status-icon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    border: 1px solid var(--white);
+  }
+  
+  .status-icon.online::after {
+    background-color: var(--success);
+  }
+  
+  .status-icon.away::after {
+    background-color: var(--warning);
+  }
+  
+  .status-icon.busy::after {
+    background-color: var(--accent);
+  }
+  
+  .status-icon.offline::after {
+    background-color: var(--gray);
+  }
+  
+  /* Icon List */
+  .icon-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .icon-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .icon-list .icon {
+    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+  }
+  
+  /* Category Icons */
+  .category-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius-full);
+    margin-right: var(--spacing-sm);
+  }
+  
+  .category-icon-beginners {
+    background-color: rgba(var(--success-rgb), 0.1);
+    color: var(--success);
+  }
+  
+  .category-icon-intermediate {
+    background-color: rgba(var(--warning-rgb), 0.1);
+    color: var(--warning);
+  }
+  
+  .category-icon-advanced {
+    background-color: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+  }
+  
+  .category-icon-principles {
+    background-color: rgba(var(--info-rgb), 0.1);
+    color: var(--info);
+  }
+  
+  /* Social Media Icons */
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-full);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    transition: all var(--transition-speed) var(--bounce-timing);
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary);
+  }
+  
+  .social-icon-youtube:hover {
+    background-color: #FF0000;
+  }
+  
+  .social-icon-twitter:hover {
+    background-color: #1DA1F2;
+  }
+  
+  .social-icon-facebook:hover {
+    background-color: #4267B2;
+  }
+  
+  .social-icon-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  
+  .social-icon-github:hover {
+    background-color: #333;
+  }
+  
+  .social-icon-discord:hover {
+    background-color: #7289DA;
+  }
+  
+  /* Notification Badge */
+  .icon-badge {
+    position: relative;
+    display: inline-flex;
+  }
+  
+  .icon-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: 1px solid var(--white);
+  }
+  
+  .icon-badge-count::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+  }
+  
+  /* Action Icons */
+  .action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--border-radius-md);
+    background-color: transparent;
+    color: var(--gray);
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+  }
+  
+  .action-icon:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--primary);
+  }
+  
+  .dark-theme .action-icon:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .action-icon-primary {
+    color: var(--primary);
+  }
+  
+  .action-icon-active {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+  }
+  
+  /* Icon SVG Definitions (embedded for standalone use) */
+  .icon-svg {
+    display: none; /* Hidden by default, referenced using <use> */
+  }
+  
+  /* Icon Flipping */
+  .icon-flip-horizontal {
+    transform: scaleX(-1);
+  }
+  
+  .icon-flip-vertical {
+    transform: scaleY(-1);
+  }
+  
+  .icon-flip-both {
+    transform: scale(-1);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+    }
+  
+    .feature-icon .icon {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .feature-icon-lg {
+      width: 64px;
+      height: 64px;
+    }
+  
+    .feature-icon-lg .icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+    }
+  
+    .feature-icon .icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .feature-icon-lg {
+      width: 56px;
+      height: 56px;
+    }
+  
+    .feature-icon-lg .icon {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .category-icon {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .category-icon .icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .icon-spin,
+    .icon-pulse,
+    .icon-shake,
+    .icon-beat,
+    .icon-flicker,
+    .icon-hover-rotate:hover,
+    .icon-hover-scale:hover,
+    .icon-hover-shake:hover {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
